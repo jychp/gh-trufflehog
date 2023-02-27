@@ -1,0 +1,34 @@
+# action.yml
+name: 'TruffleHog OSS'
+description: 'Scan Github Actions with TruffleHog (with custom whitelists)'
+inputs:
+  path:
+    description: Repository path
+    required: true
+  base:
+    description: Start scanning from here (usually main branch).
+    required: false
+    default: ''
+  head:
+    description: Scan commits until here (usually dev branch).
+    required: false
+  extra_args:
+    default: ''
+    description: Extra args to be passed to the trufflehog cli.
+    required: false
+branding:
+  icon: "shield"
+  color: "green"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - git
+    - file://${{ inputs.path }}
+    - --since-commit
+    - ${{ inputs.base }}
+    - --branch
+    - ${{ inputs.head }}
+    - --no-update
+    - --json
+    - ${{ inputs.extra_args }}

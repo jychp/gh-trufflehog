@@ -1,0 +1,12 @@
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE
+.idea/
+.vscode/
+
+# Test output
+output.json
+output_filtered.json
+.trufflehog_whitelist.yaml
