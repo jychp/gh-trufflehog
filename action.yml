@@ -1,5 +1,5 @@
 # action.yml
-name: 'TruffleHog OSS'
+name: 'TruffleHog with Whitelists'
 description: 'Scan Github Actions with TruffleHog (with custom whitelists)'
 inputs:
   path:
