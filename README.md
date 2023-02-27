@@ -1,7 +1,7 @@
 # gh-trufflehog
 Enhanced GitHub action for trufflehog
 
-## Example 
+## Example 
 
 ```yaml
 name: Leaked Secrets Scan
@@ -22,7 +22,7 @@ jobs:
           head: HEAD
 ```
 
-## Whitelist
+## Whitelist
 
 You can whitelist secrets using `.trufflehog_whitelist.yaml` file :
 
