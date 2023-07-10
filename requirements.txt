@@ -1,2 +1,2 @@
 colorama==0.4.6
-pyaml==23.5.9
+pyaml==23.7.0
