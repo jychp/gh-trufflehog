@@ -1,4 +1,4 @@
-FROM alpine:3.18
+FROM alpine:3.19
 RUN apk add --no-cache bash git openssh-client ca-certificates \
     && rm -rf /var/cache/apk/* && \
     update-ca-certificates
